@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Whatka';
+    src: url('Whatka.woff2') format('woff2'),
+        url('Whatka.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maxhild';
+    src: url('Maxhild-Regular.woff2') format('woff2'),
+        url('Maxhild-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Good-Game';
+    src: url('GoodGameRegular.woff2') format('woff2'),
+        url('GoodGameRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Boxiest';
+    src: url('Boxiest-Regular.woff2') format('woff2'),
+        url('Boxiest-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -4,305 +4,131 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- css gw -->
-    <title>ISARUH</title>
+    <title>Isaruh M Baga</title>
     <style>
-      body {
-        margin: 0;
-        background-color: #333;
-      }
 
-      .header {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-      }
-
-      .navbar {
-        display: flex;
-        justify-content: center;
-        border-radius: 20px;
-        background-color: #fff;
-      }
-
-      .navbar a {
-        color: #333;
-        text-decoration: none;
-        padding: 14px 20px;
-        font-size: 18px;
-        font-weight: bold;
-        transition: 0.3s;
-        cursor: pointer;
-      }
-
-      .navbar a:hover {
-        color: #0000c3; /* Warna latar saat hover */
-        border-radius: 5px;
-      }
-
-      .page {
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px;
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      img.profile {
-        width: 300px;
-        height: auto;
-        border-radius: 50%;
-      }
-
-      .content h1 {
-        color: #81cfff;
-        font-size: 40px;
-      }
-
-      .content h3 {
-        margin-top: 20px;
-        color: #81cfff;
-        font-size: 20px;
-      }
-
-      .content p {
-        color: #fff;
-        font-size: 18px;
-        max-width: 400px;
-        word-wrap: break-word;
-        line-height: 1.6;
-      }
-
-      .content p.motto {
-        color: #81cfff;
-      }
-  
-      #about .content p {
-        max-width: 600px;
-        margin-bottom: 20px;
-      }
-
-      #projects .content {
-        text-align: center;
-      }
-
-      #projects .list {
-        display: flex;
-        gap: 20px;
-      }
-
-      #projects .list .project {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      #projects .list .project img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-        object-position: top;
-        border-radius: 8px;
-      }
-
-      #skills .content {
-        text-align: center;
-      }
-
-      .skills-list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
-        justify-content: center;
-        margin: 0 auto;
-      }
-
-      .skill {
-        background-color: #444;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-      }
-
-      .skill p {
-        color: #fff;
-        font-size: 18px;
-      }
-
-      .level {
-        font-weight: bold;
-        color: #81cfff;
-      }
-
-      @media screen and (max-width: 768px) {
-        .navbar {
-          align-items: center;
-        }
-
-        .navbar a {
-          display: block;
-          width: 100%;
-          text-align: center;
-          font-size: 10px;
-          padding: 10px;
-        }
-
-        .page {
-          flex-direction: column;
-          text-align: center;
-          gap: 40px;
-          padding: 20px;
-        }
-
-        .content h1 {
-          font-size: 28px;
-        }
-
-        .content p {
-          font-size: 16px;
-          max-width: 100%;
-          padding: 0 20px;
-        }
-
-        img.profile {
-          width: 180px;
-        }
-
-        #projects .list {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        #projects .list .project img {
-          width: 250px;
-          max-width: 100%;
-        }
-
-        .skills-list {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
     </style>
   </head>
   <body>
-    <!-- navbar -->
+
+    <!-- header -->
     <div class="header">
-      <div class="navbar">
-        <a onclick="showPage('home')">HOME</a>
-        <a onclick="showPage('about')">ABOUT</a>
-        <a onclick="showPage('projects')">PROJECTS</a>
-        <a onclick="showPage('skills')">SKILLS</a>
+      <div class="header-content">
+        <div class="logo">
+          <a href="#home">Isaruh.</a>
+        </div>
+        <div class="navbar">
+          <a href="#about">ABOUT</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#projects">PROJECTS</a>
+        </div>
+        <div class="contact dropdown">
+          <button id="dropdownBtn" class="dropdown-button">Kontak</button>
+          <div id="dropdownContent" class="dropdown-content" style="display: none;">
+            <a href="http://">Email</a>
+            <a href="http://">WhatsApp</a>
+            <a href="http://">Instagram</a>
+            <a href="http://">LinkedIn</a>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- navbar end -->
+    <!-- header end -->
+
+    <!-- decor -->
+    <div class="decor">
+      <!-- <img class="left" src="img/left-decor.png" alt=""> -->
+      <img class="right" src="img/right-decor.png" alt="">
+    </div>
+    <!-- decor end -->
 
     <!-- home -->
-    <div id="home" class="page">
+    <div id="home">
+      <img class="profile-mobile" src="img/profile2.jpg" alt="Isaruh Muhammad Baga">
       <div class="content">
-        <h1>Halo! Saya Isaruh.</h1>
-        <h1>Seorang Programmer.</h1>
-        <p>Saya adalah pelajar SMKN 5 Malang dan seorang full stack develope.</p>
-        <p class="motto">"Eat, Sleep, Code, Repeat."</p>
+        <h1>Hi! I'm Isaruh.<br>A Web Developer.</h1>
+        <p>I'm a back-end developer<br>based in Indonesia.</p>
+        <a href="http://" target="_blank">My Resume</a>
       </div>
-      <img class="profile" src="img/Picsart_23-07-28_16-36-59-082.jpg" alt="Isaruh Muhammad Baga">
+      <img class="profile" src="img/profile2.jpg" alt="Isaruh Muhammad Baga">
     </div>
     <!-- home -->
 
     <!-- about -->
-    <div id="about" class="page hidden">
+    <div id="about">
       <div class="content">
-        <h1>Tentang Saya</h1>
+        <h2>About Me</h2>
         <p>
-          Halo! Saya Isaruh Muhammad Baga. Saya pelajar SMKN 5 Malang dan seorang full stack developer dengan pengalaman di Python, PHP, JavaScript, Pandas, Numpy, dan Matplotlib
+          Hello! I'm Isaruh, a back-end web developer. I'm very interested in programming. I have expertise in programming languages such as PHP, Python, JavaScript, TypeScript, and SQL. I started studying programming since I was in vocational school at SMKN 5 Malang.  
           <br>
           <br>
-          Saat ini saya sedang mencoba mempelajari Machine Learning karena ketertarikan saya dengan Artificial Intelligence.
-        </p>
-        <h3>Pengalaman</h3>
-        <p>
-          - Mengikuti Lomba Kompetensi Siswa bidang Artificial Intelligence 2024
-          <br>
-          - Mengikuti Program PKL di CV RedLevl Mediatama
+          Currently, I am studying machine learning because of my interest in artificial intelligence.
         </p>
       </div>
     </div>
     <!-- about end -->
+     
+    <!-- skills -->
+    <div id="skills">
+      <div class="content">
+        <h2>Skills</h2>
+      </div>
+    </div>
+    <!-- skills end -->
 
     <!-- projects -->
-    <div id="projects" class="page hidden">
+    <div id="projects">
       <div class="content">
-        <h1>Proyek yang Saya Kerjakan</h1>
+        <h2>Proyek Saya</h2>
         <div class="list">
           <div class="project">
-            <p>Web Rumah Sakit</p>
-            <img src="img/rumah-sakit.png">
+            <img src="img/dummy.jpg">
+            <p>Cancer Predict</p>
+            <a href="http://">GitHub</a>
           </div>
           <div class="project">
+            <img src="img/dummy.jpg">
             <p>Web Pengaduan Fasilitas</p>
-            <img src="img/pengaduan-fasilitas.png">
+            <a href="http://">GitHub</a>
           </div>
           <div class="project">
+            <img src="img/dummy.jpg">
             <p>Web Pengaduan Layanan</p>
-            <img src="img/pengaduan-layanan.png">
+            <a href="http://">GitHub</a>
           </div>
         </div>
       </div>
     </div>
     <!-- projects end -->
-    
-    <!-- skills -->
-    <div id="skills" class="page hidden">
-      <div class="content">
-        <h1>Keterampilan Saya</h1>
-        <div class="skills-list">
-          <div class="skill">
-            <p>HTML <br> <span class="level">Intermediate</span></p>
-          </div>
-          <div class="skill">
-            <p>CSS <br> <span class="level">Intermediate</span></p>
-          </div>
-          <div class="skill">
-            <p>PHP <br> <span class="level">Intermediate</span></p>
-          </div>
-          <div class="skill">
-            <p>Python <br> <span class="level">Intermediate</span></p>
-          </div>
-          <div class="skill">
-            <p>JavaScript <br> <span class="level">Beginner</span></p>
-          </div>
-          <div class="skill">
-            <p>PHP Native <br> <span class="level">Intermediate</span></p>
-          </div>
-          <div class="skill">
-            <p>Machine Learning <br> <span class="level">Beginner</span></p>
-          </div>
-          <div class="skill">
-            <p>Figma <br> <span class="level">Beginner</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- skills end -->
 
+    <!-- script -->
     <script>
-      function showPage(pageId) {
-        document.querySelectorAll('.page').forEach(page => {
-          page.classList.add('hidden');
-        });
-
-        document.getElementById(pageId).classList.remove('hidden');
-      }
+      const dropdownBtn = document.getElementById('dropdownBtn');
+      const dropdownContent = document.getElementById('dropdownContent');
+    
+      dropdownBtn.addEventListener('click', () => {
+        // toggle display antara block dan none
+        if (dropdownContent.style.display === 'none' || dropdownContent.style.display === '') {
+          dropdownContent.style.display = 'block';
+          dropdownBtn.classList.toggle('active');
+        } else {
+          dropdownContent.style.display = 'none';
+          dropdownBtn.classList.remove('active');
+        }
+      });
+    
+      // Opsional: klik di luar dropdown buat nutup dropdown
+      window.addEventListener('click', (e) => {
+        if (!dropdownBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+          dropdownContent.style.display = 'none';
+          dropdownBtn.classList.remove('active');
+        }
+      });
     </script>
+    <!-- script end -->
   </body>
 </html>
