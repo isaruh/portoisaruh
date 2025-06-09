@@ -335,18 +335,27 @@ body {
         padding: 10px 15px;
         font-size: 10px;
     }
+
+    .dropdown-content {
+        min-width: 80px;
+    }
+
+    .dropdown-content a {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
     /* header end */
 
     /* decor */
-    .decor {
-        display: none;
+    .decor img.right {
+        width: 200px;
     }
     /* decor end */
 
     /* home */
     #home {
         flex-direction: column;
-        padding: 170px 0 120px 0;
+        padding: 200px 0 140px 0;
     }
 
     #home .content {
@@ -376,5 +385,20 @@ body {
         width: 100px;
     }
     /* home end */
+
+    /* about */
+    #about{
+        padding: 140px 0 140px 0;
+    }
+
+    #about .content h2 {
+        font-size: 35px;
+    }
+
+    #about .content p {
+        max-width: 80%;
+        font-size: 15px;
+    }
+    /* about end */
 }
 /* responsive end */
