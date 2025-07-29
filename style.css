@@ -131,7 +131,6 @@ body {
     flex-direction: column;
     position: absolute;
     background-color: #fff;
-    min-width: 160px;
     border-radius: 12px;
     border-top-left-radius: 0;
     margin-top: 20px;
@@ -151,6 +150,12 @@ body {
     background-color: #e3e3e3;
     border-radius: 12px;
     border-top-left-radius: 0;
+}
+
+.dropdown-content a img {
+    margin: 5px;
+    width: 30px;
+    height: auto;
 }
 /* header end */
 
@@ -311,6 +316,7 @@ body {
 }
 
 #projects .content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,8 +331,8 @@ body {
 }
 
 #projects .content .list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -334,12 +340,26 @@ body {
     padding: 20px;
     border: 1px solid #a5a5a5;
     border-radius: 12px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#projects .content .list .project img {
-    width: 20%;
-    height: auto;
+#projects .content .list .project .main .image {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    /* width: 150px; */
+    /* max-width: 150px; */
+    overflow: hidden;
+    border: 1px solid #a5a5a5;
+    border-radius: 8px;
+}
+
+#projects .content .list .project .main .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 
 }
 
@@ -352,6 +372,7 @@ body {
     cursor: pointer;
     border-radius: 25px;
     text-decoration: none;
+    text-align: center;
     transition: 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -375,10 +396,6 @@ body {
     .dropdown-button {
         padding: 10px 15px;
         font-size: 10px;
-    }
-
-    .dropdown-content {
-        min-width: 80px;
     }
 
     .dropdown-content a {
