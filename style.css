@@ -99,63 +99,28 @@ body {
     border-radius: 5px;
 }
 
-.dropdown {
-    position: relative;
-}
-
-.dropdown-button {
+.contact-header a {
     background-color: #4f95ff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 8px 15px;
     font-size: 15px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
     border-radius: 25px;
     transition: 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-button:hover {
+.contact-header a:hover {
     background-color: #345f9f;
     color: #fff;
 
 }
 
-.dropdown-button.active {
+.contact-header a.active {
     background-color: #345f9f;
     color: #fff;
-}
-
-.dropdown-content {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 12px;
-    border-top-left-radius: 0;
-    margin-top: 20px;
-    z-index: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-content a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    padding: 5px 20px;
-    transition: 0.3s;
-}
-
-.dropdown-content a:hover {
-    background-color: #e3e3e3;
-    border-radius: 12px;
-    border-top-left-radius: 0;
-}
-
-.dropdown-content a img {
-    margin: 5px;
-    width: 30px;
-    height: auto;
 }
 /* header end */
 
@@ -332,55 +297,153 @@ body {
 
 #projects .content .list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
-#projects .content .list .project {
+#projects .content .list .item {
+    min-width: 400px;
     padding: 20px;
     border: 1px solid #a5a5a5;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10px;
 }
 
-#projects .content .list .project .main .image {
-    aspect-ratio: 1 / 1;
-    width: 100%;
-    /* width: 150px; */
-    /* max-width: 150px; */
-    overflow: hidden;
-    border: 1px solid #a5a5a5;
-    border-radius: 8px;
+#projects .content .list .item .main {
+    display: flex;
+    flex-direction: column;
 }
 
-#projects .content .list .project .main .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-
-}
-
-#projects .content .list .project a {
-    background-color: #4f95ff;
-    color: #fff;
-    padding: 10px 20px;
+#projects .content .list .item .main a {
+    color: #4f95ff;
     font-size: 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 25px;
+    font-weight: bold;
     text-decoration: none;
-    text-align: center;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#projects .content .list .project a:hover {
-    background-color: #345f9f;
+#projects .content .list .item .main a:hover {
+    text-decoration: underline;
+}
+
+#projects .content .list .item .main p {
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+#projects .content .list .item .language {
+    display: flex;
+    flex-direction: column;
+}
+
+#projects .content .list .item .language .group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#projects .content .list .item .language .group .dot {
+    width: 5px;
+    height: 5px;
+    background-color: #353535;
+    border-radius: 50%;
+}
+
+#projects .content .list .item .language .group span {
+    color: #353535;
+    font-size: 12px;
 }
 /* projects end */
+
+/* contact */
+#contact {
+    position: relative;
+    z-index: 1;
+    padding: 120px 100px 120px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#contact .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .content h2 {
+    color: #4f95ff;
+    font-size: 70px;
+    font-family: 'Boxiest';
+    text-shadow: -2px 3px 0 #000;
+    margin: 0 0 40px 0;
+}
+
+#contact .content .list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#contact .content .list .item {
+    min-width: 400px;
+    padding: 20px;
+    border: 1px solid #a5a5a5;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#contact .content .list .item .main {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#contact .content .list .item .main img {
+    height: 20px;
+    width: auto;
+}
+
+#contact .content .list .item .main span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#contact .content .list .item .profile {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .content .list .item .profile .group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#contact .content .list .item .profile .group .dot {
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+#contact .content .list .item .profile .group a {
+    color: #333;
+    font-size: 12px;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+#contact .content .list .item .profile .group a:hover {
+    text-decoration: underline;
+}
+/* contact end */
 
 /* responsive */
 @media screen and (max-width: 768px) {
@@ -389,17 +452,17 @@ body {
         font-size: 20px;
     }
 
-    .navbar {
-        display: none;
+    .navbar a {
+        font-size: 12px;
     }
 
-    .dropdown-button {
+    .contact-header {
         padding: 10px 15px;
         font-size: 10px;
     }
 
-    .dropdown-content a {
-        padding: 5px 10px;
+    .contact-header a {
+        padding: 10px 15px;
         font-size: 10px;
     }
     /* header end */
@@ -497,16 +560,42 @@ body {
     }
 
     #projects .content .list {
-        flex-direction: column;
-        width: 80%;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+    #projects .content .list .item .main a {
+        font-size: 13px;
     }
 
-    #projects .content .list .project p {
-        font-size: 15px;
+    #projects .content .list .item .main p {
+        font-size: 10px;
+    }
+    
+    #projects .content .list .item .language .group span {
+        font-size: 10px;
     }
 
-    #projects .content .list .project a {
-        padding: 10px 15px;
+    #contact {
+        padding: 140px 0 140px 0;
+    }
+
+    #contact .content h2 {
+        font-size: 35px;
+    }
+
+    #contact .content .list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    #contact .content .list .item .main img {
+        height: 18px;
+    }
+
+    #contact .content .list .item .main span {
+        font-size: 16px;
+    }
+
+    #contact .content .list .item .profile .group a {
         font-size: 10px;
     }
     /* projects end */

@@ -26,19 +26,8 @@
           <a href="#skills">SKILLS</a>
           <a href="#projects">PROJECTS</a>
         </div>
-        <div class="contact dropdown">
-          <button id="dropdownBtn" class="dropdown-button">Contact</button>
-          <div id="dropdownContent" class="dropdown-content" style="display: none;">
-            <a href="mailto:isaruhmbaga@gmail.com">
-              <img src="img/email.png" alt="Email">
-            </a>
-            <a href="https://www.linkedin.com/in/isaruh-muhammad-baga-8a80ba310">
-              <img src="img/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/isaruh">
-              <img src="img/github.png" alt="GitHub">
-            </a>
-          </div>
+        <div class="contact-header">
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </div>
@@ -56,7 +45,7 @@
       <img class="profile-mobile" src="img/profile.jpg" alt="Isaruh Muhammad Baga">
       <div class="content">
         <h1>Hi! I'm Isaruh.<br>A Developer.</h1>
-        <p>I'm a junior developer<br>based in Indonesia.</p>
+        <p>I'm a developer<br>based in Indonesia.</p>
         <a href="https://drive.google.com/file/d/1yWKNIV6Isvo_rQep3kDADXeZGLC-NeVr/view?usp=drivesdk" target="_blank">My Resume</a>
       </div>
       <img class="profile" src="img/profile.jpg" alt="Isaruh Muhammad Baga">
@@ -68,7 +57,7 @@
       <div class="content">
         <h2>About Me</h2>
         <p>
-          Hello! I'm Isaruh, a junior developer. I'm very interested in programming. I have expertise in programming languages such as PHP, Python, JavaScript, and Java. I started studying programming since I was in vocational school at SMKN 5 Malang.  
+          Hello! I'm Isaruh Muhammad Baga, but you can call me Isaruh, a developer. I'm very interested in programming. I have expertise in programming languages such as PHP, Python, JavaScript, and Java. I started studying programming since I was in vocational school at SMKN 5 Malang.  
           <br>
           <br>
           Currently, I'm studying machine learning because of my interest in artificial intelligence.
@@ -76,7 +65,7 @@
       </div>
     </div>
     <!-- about end -->
-     
+    
     <!-- skills -->
     <div id="skills">
       <div class="content">
@@ -111,31 +100,106 @@
       <div class="content">
         <h2>My Projects</h2>
         <div class="list">
-          <div class="project">
+          <div class="item">
             <div class="main">
-              <div class="image">
-                <img src="img/obesity-classification.png">
-              </div>
-              <p>[Machine Learning] Obesity Classification</p>
+              <a href="https://github.com/isaruh/obesity-classification">Obesity Classification</a>
             </div>
-            <a href="https://github.com/isaruh/obesity-classification" target="_blank">GitHub</a>
+            <div class="language">
+              <div class="group">
+                <div class="dot"></div>
+                <span>Jupyter Notebook</span>
+              </div>
+            </div>
           </div>
-          <div class="project">
+          <div class="item">
             <div class="main">
-              <div class="image">
-                <img src="img/dummy.jpg">
-              </div>
-              <p>[under construction, please wait]</p>
+              <a href="https://github.com/isaruh/xor-cipher-api">XOR Cipher API</a>
+              <p>XOR Cipher API with Golang</p>
             </div>
-            <a href="http://">GitHub</a>
+            <div class="language">
+              <div class="group">
+                <div class="dot"></div>
+                <span>Go</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="main">
+              <a href="https://github.com/isaruh/caesar-cipher-api">Caesar Cipher API</a>
+              <p>Caesar Cipher API with Golang</p>
+            </div>
+            <div class="language">
+              <div class="group">
+                <div class="dot"></div>
+                <span>Go</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="main">
+              <a href="https://github.com/isaruh/be-social-media">BE Social Media</a>
+              <p>Social media with Java Spring Boot [WIP]</p>
+            </div>
+            <div class="language">
+              <div class="group">
+                <div class="dot"></div>
+                <span>Java</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- projects end -->
 
+    <!-- contact -->
+    <div id="contact">
+      <div class="content">
+        <h2>Contact</h2>
+        <div class="list">
+          <div class="item">
+            <div class="main">
+              <img src="img/linkedin.png">
+              <span>LinkedIn</span>
+            </div>
+            <div class="profile">
+              <div class="group">
+                <div class="dot"></div>
+                <a href="https://www.linkedin.com/in/isaruh-muhammad-baga">Isaruh Muhammad Baga</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="main">
+              <img src="img/email.png">
+              <span>Email</span>
+            </div>
+            <div class="profile">
+              <div class="group">
+                <div class="dot"></div>
+                <a href="mailto:isaruhmbaga@gmail.com">isaruhmbaga@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="main">
+              <img src="img/github.png">
+              <span>Github</span>
+            </div>
+            <div class="profile">
+              <div class="group">
+                <div class="dot"></div>
+                <a href="https://github.com/isaruh">@isaruh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- contact end -->
+
     <!-- script -->
-    <script>
+    <!-- <script>
       const dropdownBtn = document.getElementById('dropdownBtn');
       const dropdownContent = document.getElementById('dropdownContent');
     
@@ -157,7 +221,7 @@
           dropdownBtn.classList.remove('active');
         }
       });
-    </script>
+    </script> -->
     <!-- script end -->
   </body>
 </html>
