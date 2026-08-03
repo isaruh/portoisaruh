@@ -27,3 +27,13 @@ jobs:
       - name: menampilkan teks
         run: |
           echo "ini step deployment"
+      - name: Execute remote SSH commands using SSH key
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}r
+          port: ${{ secrets.PORT }}
+          script: |
+            rm -rf /var/www/html/*
+            git clone https://github.com/isaruh/portoisaruh /var/www/html/
